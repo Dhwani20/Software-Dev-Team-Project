@@ -2,7 +2,7 @@
 Title: TBD
 educational app that is entertaining
 
-Dhwani Khatter - Dhwani20
+Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr
 ADD YOUR FULL NAME AND GITHUB USERNAMES
 
 
