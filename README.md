@@ -1,8 +1,6 @@
-# Software-Dev-team-project
-Title: TBD
-educational app that is entertaining
-
-Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr
+# title of project here
+## educational app that is entertaining
+### by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr
 ADD YOUR FULL NAME AND GITHUB USERNAMES
 
 
