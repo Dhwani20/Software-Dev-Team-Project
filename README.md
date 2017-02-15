@@ -9,7 +9,7 @@ Who: List of people on the team: Full names and GitHub user names
 
 Title: Title of the project
 
-Description: Short description of the project (help explain to us what you are doing)
+Description: In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
 
 Vision statement: (what you would tell potential customers) Be sure to follow the guidelines from lecture!
 
@@ -20,7 +20,7 @@ It would take a lot of time to make and we potentially might not finish
 Using new programming languages
 No prior experience working with the people on the team
 
-Mitigation strategy for dealing with the risk
+Mitigation strategy for dealing with the risk: This can be dealt with by creating a timeline and updating it at each milestone as well working together in order to gain experience with working in a team and with different programming languages. 
 
 
 List of requirements: for the project
