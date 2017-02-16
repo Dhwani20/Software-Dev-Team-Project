@@ -4,14 +4,16 @@
 ### Description: 
 In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
 
-Vision statement: To make learning about the natural sciences more effective and fun.
+### Vision statement: 
+To make learning about the natural sciences more effective and fun.
 
-Motivation: This app would be useful to educate students about the natural sciences and bring more students into STEM based studies.
+### Motivation: 
+This app would be useful to educate students about the natural sciences and bring more students into STEM based studies.
 
-Risks:
-It would take a lot of time to make and we potentially might not finish
-Using new programming languages.
-No prior experience working with the people on the team
+### Risks:
+* It would take a lot of time to make and we potentially might not finish.
+* Using new programming languages.
+* No prior experience working with the people on the team.
 
 Mitigation strategy for dealing with the risk: This can be dealt with by creating a timeline and updating it at each milestone as well as working together in order to gain experience with working in a team and with different programming languages.
 
