@@ -1,6 +1,6 @@
 # (title of project here) "Life as We Know It" - thats what I'm thinking for the title
 ## educational app that is entertaining
-### by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr //ADD YOUR FULL NAME AND GITHUB USERNAMES
+### by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli //ADD YOUR FULL NAME AND GITHUB USERNAMES
 
 
 FEEL FREE TO EDIT ANY PORTION OF THIS AS IT NEEDS TO BE DONE BY THURS 2/16 AT 6PM
