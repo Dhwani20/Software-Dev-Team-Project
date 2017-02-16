@@ -1,4 +1,4 @@
-# (title of project here)
+# (title of project here) "Life as We Know It" - thats what I'm thinking for the title
 ## educational app that is entertaining
 ### by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr //ADD YOUR FULL NAME AND GITHUB USERNAMES
 
@@ -7,13 +7,13 @@ FEEL FREE TO EDIT ANY PORTION OF THIS AS IT NEEDS TO BE DONE BY THURS 2/16 AT 6P
 
 Who: List of people on the team: Full names and GitHub user names
 
-Title: Title of the project
+Title: Title of the project - "Life as We Know It"
 
 Description: In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
 
-Vision statement: (what you would tell potential customers) Be sure to follow the guidelines from lecture!
+Vision statement: Enjoyable and environmentally friendly! 
 
-Motivation:This app would be useful to educate students about the natural sciences and bring more students into STEM based studies 
+Motivation:This app would be useful to educate students about the natural sciences and bring more students into STEM based studies.
 
 Risks: to project completion:
 It would take a lot of time to make and we potentially might not finish
