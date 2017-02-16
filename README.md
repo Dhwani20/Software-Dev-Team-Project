@@ -19,12 +19,12 @@ This app would be useful to educate students about the natural sciences and brin
 This can be dealt with by creating a timeline and updating it at each milestone as well as working together in order to gain experience with working in a team and with different programming languages.
 
 ### List of requirements:
-1. **(4 hours)** As a teacher, I want helpful context so that my students can access information explaining the science used in the game.
-2. **(5 hours)** As a student, I want to be notified when in the vacinity of another player so that I can have the option to engage that player in competition.
-3. **(7 hours)** As a student, I want a point system and character statistics so that I can track my progress and be more competative.
-4. **(8 hours)** As a developer, I want to develop the wireframe of the components so that I can build the foundation of the graphic design.
-5. **(5 hours)** As a developer, I want to establish mutation criteria so that I can establish when and how characters develop.
-6. **(6 hours)** As a developer, I want to obtain and incorporate geographic data so that I can define the application's local environment.
+1. **(2 hours)** As a teacher, I want helpful context so that my students can access information explaining the science used in the game.
+2. **(4 hours)** As a student, I want to be notified when in the vacinity of another player so that I can have the option to engage that player in competition.
+3. **(5 hours)** As a student, I want a point system and character statistics so that I can track my progress and be more competative.
+4. **(6 hours)** As a developer, I want to develop the wireframe of the components so that I can build the foundation of the graphic design.
+5. **(4 hours)** As a developer, I want to establish mutation criteria so that I can establish when and how characters develop.
+6. **(3 hours)** As a developer, I want to obtain and incorporate geographic data so that I can define the application's local environment.
 
 ### Methodology: 
 Waterfall 
