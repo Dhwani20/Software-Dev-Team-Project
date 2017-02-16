@@ -13,7 +13,7 @@ Motivation: This app would be useful to educate students about the natural scien
 
 Risks:
 It would take a lot of time to make and we potentially might not finish
-Using new programming languages
+Using new programming languages.
 No prior experience working with the people on the team
 
 Mitigation strategy for dealing with the risk: This can be dealt with by creating a timeline and updating it at each milestone as well as working together in order to gain experience with working in a team and with different programming languages.
