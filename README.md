@@ -1,10 +1,8 @@
 # "Life as We Know It"
-
 ## by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli, Josephina Hendrix - jrhendrix, Zachary Haney - zaha0077
 
-FEEL FREE TO EDIT ANY PORTION OF THIS AS IT NEEDS TO BE DONE BY THURS 2/16 AT 6PM
-
-Description: In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
+### Description: 
+In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
 
 Vision statement: To make learning about the natural sciences more effective and fun.
 
