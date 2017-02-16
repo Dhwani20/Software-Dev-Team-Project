@@ -33,4 +33,4 @@ Waterfall
 [Trello](https://trello.com/b/oPpdoATT/software-dev-team-project)
 
 ### Project plan:
-![project plan image](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/snapshot%20of%20project%20plan.PNG)
+![project plan image](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/Project%20Plan.PNG)
