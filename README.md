@@ -1,7 +1,6 @@
 # "Life as We Know It"
-## Educational app that is entertaining to bring interest to STEM education
 
-### by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli, Josephina Hendrix - jrhendrix, Zachary Haney - zaha0077
+## by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli, Josephina Hendrix - jrhendrix, Zachary Haney - zaha0077
 
 FEEL FREE TO EDIT ANY PORTION OF THIS AS IT NEEDS TO BE DONE BY THURS 2/16 AT 6PM
 
