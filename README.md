@@ -15,18 +15,10 @@ This app would be useful to educate students about the natural sciences and brin
 * Using new programming languages.
 * No prior experience working with the people on the team.
 
-Mitigation strategy for dealing with the risk: This can be dealt with by creating a timeline and updating it at each milestone as well as working together in order to gain experience with working in a team and with different programming languages.
+### dealing with the risk: 
+This can be dealt with by creating a timeline and updating it at each milestone as well as working together in order to gain experience with working in a team and with different programming languages.
 
-List of requirements:
-6 user stories
-Each story must have a unique ID number
-Written in the Agile format: “As a [role], I want to [do X] so that I can [benefit with Y]”
-Each requirement must have a size. You have two options for sizing:
-Agile sizing – story points
-Time estimate to complete
-All stories should be sized to be completed in less than 8 hours (approximately, and something equivalent to a day or less in Agile story points). If your story is bigger than that, then break it up into smaller stories.
-
-User Stories:
+### List of requirements:
 1. As a teacher, I want help context so that my students can access information explaining the game science.
 2. As a student, I want to be notified when in the vacinity of another player so that I can have the option to engage that player in competition.
 3. As a student, I want a point system and character statistics so that I can track my progress and be more competative.
@@ -34,12 +26,11 @@ User Stories:
 5. As a developer, I want to establish mutation criteria so that I can establish when and how characters develop.
 6. As a developer, I want to obtain and incorporate geographic data so that I can define the application's local environment.
 
+### Methodology: 
+Waterfall 
 
-Methodology: Waterfall 
-Project Tracking software: Trello(add link) 
+### Project Tracking software: 
+[Trello](https://trello.com/b/oPpdoATT/software-dev-team-project)
 
-GitHub Issues & Milestones
-Link to project tracking software: make sure instructor and TAs have access https://trello.com/b/oPpdoATT/software-dev-team-project
-Be sure to continue to use this throughout the semester! Even though these are small projects, the point is to practice the methodologies and tools used in industry!
-Project plan: created from your Project Tracking software. Copy-paste the plan (or screenshot of) from your project tracking software into the repository.
+### Project plan:
 
