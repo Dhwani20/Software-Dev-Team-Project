@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/mobile1.unity
-  isLoaded: 1
-  isActive: 1
