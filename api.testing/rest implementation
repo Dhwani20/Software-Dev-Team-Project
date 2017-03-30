@@ -47,3 +47,100 @@ string productlist = File.ReadAllText(Application.dataPath + "/Resources/AssetBu
                     Debug.Log (www.error);
                 }
     }
+    
+    public class GridItem {
+		
+		public double latitude;
+		public double longtitude;
+		public string name;
+		public Texture2D texture2D = new Texture2D (1024, 1024, TextureFormat.ARGB32, false);
+		public float textureOffSet;
+		public float textureScale;
+		public Vector3 position;
+		public Vector2 localPosition;
+		public Vector2 localScale;
+		public Vector2 gridPosition;
+		public GameObject obj;
+
+		private int blockSize;
+		private int maxY;
+		private int centerRow;
+		private bool mapLoaded = false;
+
+		private Transform parent;
+
+		public GridItem (string name, double latitude, double longtitude, int blockSize, Vector2 gridPosition, float textureOffSet, float textureScale, int maxY, Transform parent) {
+			this.name = name;
+			this.latitude = latitude;
+			this.longtitude = longtitude;
+			this.blockSize = blockSize;
+			this.gridPosition = gridPosition;
+			this.textureOffSet = textureOffSet;
+			this.textureScale = textureScale;
+			this.maxY = maxY;
+			this.parent = parent;
+
+			initializeGridItem ();
+		}
+
+		public GameObject Draw () {
+			obj = GameObject.CreatePrimitive (PrimitiveType.Cube);
+			obj.transform.localScale = new Vector3 (blockSize, 1, blockSize);
+			obj.transform.position = position;
+			obj.name = name;
+			obj.transform.parent = this.parent;
+			TryImageFromCache();
+			return obj;
+		}
+
+
+		public void TryImageFromCache() {
+			if (File.Exists(Grid.localStorageDirectory + Path.DirectorySeparatorChar + "block." + latitude.ToString ("F9") + "-" + longtitude.ToString ("F9") + ".png")) {
+				Debug.Log(latitude.ToString ("F9") + "-" + longtitude.ToString ("F9") + " loaded from cache");
+				texture2D.LoadImage(File.ReadAllBytes(Grid.localStorageDirectory + Path.DirectorySeparatorChar + "block." + latitude.ToString ("F9") + "-" + longtitude.ToString ("F9") + ".png"));	
+				Renderer rend;
+				rend = obj.GetComponent<Renderer> ();
+
+				rend.material.mainTexture = texture2D;
+				rend.material.mainTextureOffset = localPosition;
+				rend.material.SetTextureScale ("_MainTex", localScale);
+				mapLoaded = true;
+			}	
+		}
+
+		void initializeGridItem () {
+			localPosition = new Vector2 (0, this.textureOffSet);
+			localScale = new Vector2 (1, textureScale);	
+			centerRow = maxY / 2;
+
+			int x = (int)((gridPosition.x - centerRow) * blockSize);
+			int y = (int)((gridPosition.y - centerRow) * blockSize);
+
+			position = new Vector3 (x, 0.5f, y);
+			Draw ();
+		}
+
+		public string getImageUrl () {
+			return "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude.ToString ("F9") + "," + longtitude.ToString ("F9") + "&zoom=18&size=512x512&scale=2&maptype=roadmap";
+		}
+
+		public IEnumerator Download () {
+			if (!mapLoaded) {
+				string url = getImageUrl ();
+				//Debug.Log (url);
+				WWW www = new WWW (url);
+				yield return www;
+				www.LoadImageIntoTexture (texture2D);
+				File.WriteAllBytes(Grid.localStorageDirectory + Path.DirectorySeparatorChar + "block." + latitude.ToString ("F9") + "-" + longtitude.ToString ("F9") + ".png"  ,www.bytes);
+				Debug.Log("Writing file \n" + Grid.localStorageDirectory + Path.DirectorySeparatorChar + "block." + latitude.ToString ("F9") + "-" + longtitude.ToString ("F9") + ".png"); 
+				Renderer rend;
+				rend = obj.GetComponent<Renderer> ();
+
+				rend.material.mainTexture = texture2D;
+				rend.material.mainTextureOffset = localPosition;
+				rend.material.SetTextureScale ("_MainTex", localScale);
+				mapLoaded = true;
+			}
+		}
+
+	}
