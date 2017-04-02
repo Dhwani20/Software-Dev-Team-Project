@@ -1,0 +1,26 @@
+ public class RPGClass
+ {
+     /// Name of the class(amoeba, etc)
+     public string ClassName { get; set; }
+     
+     public int Strength { get; set; }
+     public int Vitality { get; set; }
+     public int Dexterity { get; set; }
+     public int Intelligence { get; set; }
+ }
+ 
+ // Character.cs
+ using UnityEngine;
+ using System.Collections.Generic;
+ 
+ public class Character : MonoBehavior
+ {
+     private List<RPGClass> m_Classes;
+     
+     void Start()
+     {
+         m_Classes = new List<RPGClass>(); // could populate collection during instantiation if you wanted 
+         m_Classes.Add(new RPGClass() { ClassName = "Warrior", Strength = 12, Vitality = 12, Dexterity = 10, Intelligence = 8 };
+         m_Classes.Add(new RPGClass() { ClassName = "Archer", Strength = 10, Vitality = 11, Dexterity = 12, Intelligence = 9 };
+     }
+ }
