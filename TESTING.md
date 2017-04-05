@@ -21,6 +21,8 @@ Test steps
   1. On start screen, begin game
   2. Use arrow keys to navigate character around map 
   3. Hold down keys to accelerate movement of character
+
+
 Expected result
 
 	User should be able to traverse map 
