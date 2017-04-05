@@ -16,7 +16,7 @@ Description
 	Moving around on map  with arrow keys, map will update with each tick an arrow key is held down
 
 Pre-conditions
-  
+  User is on game start menu
 Test steps
   1. On start screen, begin game
   2. Use arrow keys to navigate character around map 
