@@ -27,7 +27,7 @@ This can be dealt with by creating a timeline and updating it at each milestone 
 6. **(Estimate: 4hr)** As a developer, I want to obtain and incorporate geographic data so that I can define the application's local environment. 
 
 ### Methodology: 
-Waterfall 
+Agile
 
 ### Project Tracking software: 
 [Trello](https://trello.com/b/oPpdoATT/software-dev-team-project)
