@@ -13,23 +13,29 @@ Use case name
 	Testing map movement
 Description
 
-
 	Moving around on map  with arrow keys, map will update with each tick an arrow key is held down
 
 Pre-conditions
-
+  
 Test steps
-
+  1. On start screen, begin game
+  2. Use arrow keys to navigate character around map 
+  3. Hold down keys to accelerate movement of character
 Expected result
 
+	User should be able to traverse map 
 Actual result
 
+	User is able to traverse map
 Status (Pass/Fail)
 
+	Pass
 Notes
 
+	N/A
 Post-conditions
 
+	
 ___
 
 Use case name
