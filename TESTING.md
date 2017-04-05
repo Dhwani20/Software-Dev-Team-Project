@@ -1,15 +1,17 @@
-*Who*: Dhwani Khatter, Josephina Hendrix, Mario Ramirez, Richard Li, Zachary Haney
+**Who**: Dhwani Khatter, Josephina Hendrix, Mario Ramirez, Richard Li, Zachary Haney
 
-*Title*: Life as We Know It
+**Title**: Life as We Know It
 
-*Vision(: To make learning about the natural scienes more effective and fun
+**Vision**: To make learning about the natural scienes more effective and fun
 
-*Automated Tests*:
+**Automated Tests**:
 
-*User Acceptance Tests*:
+**User Acceptance Tests**:
 Use case name
+
 	Testing map movement
 Description
+
 	Moving around on map  with arrow keys, map will update with each tick an arrow key is held down
 Pre-conditions
 
