@@ -7,12 +7,13 @@
 **Automated Tests**:
 
 **User Acceptance Tests**:
+
 Use case name
 
 	Testing map movement
 Description
+Moving around on map  with arrow keys, map will update with each tick an arrow key is held down
 
-	Moving around on map  with arrow keys, map will update with each tick an arrow key is held down
 Pre-conditions
 
 Test steps
