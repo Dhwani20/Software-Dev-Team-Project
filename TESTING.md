@@ -7,7 +7,15 @@
 **Automated Tests**:
 
 How To Replicate Testing:
-1. kjlkj
+1. Open unity and open project "menu" (\Software-Dev-team-project-master\Software-Dev-team-project-master\Hendrix\Menu).
+2. Click on playerCanvas in the Hierarchy tab.
+3. In the Inspector tab look for the "Show Panels", "Testing Sprites", and "Testing Timer" Scripts and make sure the Testing button in checked.
+4. click on Plane in the Hierarchy tab.
+5. In the INspector tab look for the "Move Map" Script and make sure the Testing button in checked.
+6. Open the "Console" window by going to Window>Console, this is where the success or fail messages will be displayed.
+7. clear the Console and press the play button in Unity.
+8. As the game plays it you will see different features occur in the "Game" window and success/fail messages appear in the Console.
+9. When the test are completed the game with exit and the console will still have the success/fail messages.
 
 ![Testing Outcome](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/team%20project%20pics/testingOutput.PNG)
 
