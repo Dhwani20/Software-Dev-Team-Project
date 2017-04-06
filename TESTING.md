@@ -7,7 +7,6 @@
 **Automated Tests**:
 
 ***How To Replicate Testing:***
-
 ****1.****
 ![Testing Outcome](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/team%20project%20pics/testingOutput.PNG)
 
