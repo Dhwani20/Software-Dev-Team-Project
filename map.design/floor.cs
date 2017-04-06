@@ -37,6 +37,7 @@ public class Floor : MonoBehaviour
             addHorizontalRow(row);
         }
         gridIsUpdated = true;
+        
     }
 
 
