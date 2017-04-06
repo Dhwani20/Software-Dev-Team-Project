@@ -71,7 +71,7 @@ Notes
 Post-conditions
 	
 	
-	***fill me out
+	Arrow keys are wroking.
 ___
 Use case name
 
@@ -105,6 +105,6 @@ Notes
 	N/A
 Post-conditions
 	
-	**fill me out
+	Q, W, E, R keys are working
 
 
