@@ -7,7 +7,7 @@
 **Automated Tests**:
 
 How To Replicate Testing:
-1. Open unity and open project "menu" (\Software-Dev-team-project-master\Software-Dev-team-project-master\Hendrix\Menu).
+1. Open unity and open project "menu" (\Software-Dev-team-project-master\LAWKI).
 2. Click on playerCanvas in the Hierarchy tab.
 3. In the Inspector tab look for the "Show Panels", "Testing Sprites", and "Testing Timer" Scripts and make sure the Testing button in checked.
 4. click on Plane in the Hierarchy tab.
