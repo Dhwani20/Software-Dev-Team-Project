@@ -71,7 +71,7 @@ Notes
 Post-conditions
 	
 	
-	Arrow keys are wroking
+	Arrow keys are working
 ___
 Use case name
 
