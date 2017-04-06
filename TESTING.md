@@ -17,7 +17,7 @@ Description
 
 Pre-conditions
 
-  User has started the game
+	User has started the game
 
 Test steps
   1. On start screen, begin game
