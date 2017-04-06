@@ -5,7 +5,7 @@
 **Vision**: To make learning about the natural scienes more effective and fun
 
 **Automated Tests**:
-### how to replicate testing:
+***how to replicate testing:***
 ![Testing Outcome](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/team%20project%20pics/testingOutput.PNG)
 
 **User Acceptance Tests**:
