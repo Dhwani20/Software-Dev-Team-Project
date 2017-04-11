@@ -1,5 +1,5 @@
 using UnityEngine;
-//using Assets.Helpers;
+using Assets.Helpers;
 using System;
 using System.Collections;
 
@@ -82,4 +82,22 @@ public class TileManager : MonoBehaviour {
 		
 	}
 
+    [Serializable]
+    public class Settings
+    {
+        [SerializeField]
+        public Material material;
+        [SerializeField]
+        public int zoom = 18f;
+        [SerializeField]
+        public int size = 640;
+        [SerializeField]
+        public float scale = 1f;
+        [SerializeField]
+        public string key;
+        [SerializeField]
+        public string style = "emerald";
 
+        
+    }
+}
