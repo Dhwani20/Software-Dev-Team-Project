@@ -11,14 +11,30 @@ using UnityEngine;
 
 public class statsMaster : MonoBehaviour {
     int hpMax;              //Max Population (Health) this stat's value will ideally be determined based on a calculation involving the other stats + environmental factors. That aspect has not yet been implemented since this is mostly meant to test mutation behavior.
+    public int hp;          //Population
     int hunger;             //Hunger
     int atk;                //Attack
     int def;                //Defense
     int spd;                //Speed
     int rep;                //Reproduction Rate
     int size;               //Size
-    int mutationChance = 1; //mutation chance
+    
+    //Hidden Stats
+
+    //Resistances
+    int cold;
+    int heat; //unused until temperature is implemented
+    int wet;
+    int dry; //unused until temperature is implemented
+
+    int mutationChance = 1; //Mutation chance
     int chance;
+
+    //placeholder variables. Mario, please adapt these to the proper variables if you can.
+    bool isRaining;
+    bool isSnowing;
+    bool isSunny;
+    bool isCloudy;
 
     // Use this for initialization
     void Start () {
@@ -29,6 +45,11 @@ public class statsMaster : MonoBehaviour {
         spd = 1;                
         rep = 2;                
         size = 1;
+
+        cold = 50;
+        heat = 50;
+        wet = 50;
+        dry = 50;
     }
 	
 	// Update is called once per frame
@@ -42,6 +63,7 @@ public class statsMaster : MonoBehaviour {
                 chance = 0;
             Mutate(chance); //once mutation chance is determined, mutate.
         }
+        weatherUpdate();
 		
 	}
 
@@ -83,6 +105,52 @@ public class statsMaster : MonoBehaviour {
                 else
                     size += 1;
                 break;
+
+        }
+
+    }
+
+    void weatherUpdate() //climate based mutation
+    {
+        //Sunny and Cloudy have no effect until temperature is implemented
+        if (isRaining) {
+            if ((int)Random.Range(1, 200) <= mutationChance)
+            {
+                if (wet < 200)
+                    wet++;
+            }
+            if (wet >= 75)
+            { //adapted so well to rain conditions that the species is thriving
+                if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
+                {
+                    hpMax++;
+                    hp++;
+                }
+            }
+            else if ((2 * wet) < dry) { //susceptible to rain
+                if (hp > 0) hp--;
+            }
+
+        }
+        else if (isSnowing)
+        {
+            if ((int)Random.Range(1, 200) <= mutationChance)
+            {
+                if (cold < 200)
+                    cold++;
+            }
+            if (cold >= 75)
+            { //adapted so well to snowy conditions that the species is thriving
+                if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
+                {
+                    hpMax++;
+                    hp++;
+                }
+            }
+            else if ((2 * cold) < heat)
+            { //susceptible to cold
+                if (hp > 0) hp--;
+            }
 
         }
 
