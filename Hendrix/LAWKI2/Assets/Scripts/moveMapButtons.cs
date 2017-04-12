@@ -5,6 +5,7 @@ public class moveMapButtons : MonoBehaviour
 {
 	private float latitude = 105;
 	private float longitude = 40;
+	private float diff = 0.001f;
 	public bool loadOnStart = true;
 	private string url;
 	private string qs;
@@ -82,7 +83,7 @@ public class moveMapButtons : MonoBehaviour
 	{
 		//moveLeft = true;
 		Debug.Log("left arrow key is held down");
-		longitude = longitude - 1;
+		longitude = longitude - diff;
 		StartCoroutine(_Update());
 	}
 
@@ -94,7 +95,7 @@ public class moveMapButtons : MonoBehaviour
 	{
 		//moveRight = true;
 		Debug.Log("right arrow key is held down");
-		longitude = longitude + 1;
+		longitude = longitude + diff;
 		StartCoroutine(_Update());
 	}
 
@@ -107,7 +108,7 @@ public class moveMapButtons : MonoBehaviour
 	{
 		//moveFwd = true;
 		Debug.Log("up arrow key is held down");
-		latitude = latitude + 1;
+		latitude = latitude + diff;
 		StartCoroutine(_Update());
 	}
 
@@ -120,7 +121,7 @@ public class moveMapButtons : MonoBehaviour
 	{
 		//moveBwd = true;
 		Debug.Log("down arrow key is held down");
-		latitude = latitude - 1;
+		latitude = latitude - diff;
 		StartCoroutine(_Update());
 	}
 

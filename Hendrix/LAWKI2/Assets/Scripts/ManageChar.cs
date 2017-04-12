@@ -51,10 +51,10 @@ public class ManageChar : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ClearSprite ();
-		playerSpriteArr [2].SetActive (false);
-		playerSpriteArr2 [2].SetActive (false);
-		playerSpriteArr3 [2].SetActive (false);
-		charTextArr [2].SetActive(false);
+		playerSpriteArr [1].SetActive (false);
+		playerSpriteArr2 [1].SetActive (false);
+		playerSpriteArr3 [1].SetActive (false);
+		charTextArr [1].SetActive(false);
 		count = 1;
 		playerSpriteArr [count].SetActive (true);
 		charTextArr [count].SetActive(true);
@@ -62,14 +62,14 @@ public class ManageChar : MonoBehaviour {
 		playerSpriteArr2 [count].SetActive (true);
 		playerSpriteArr3 [count].SetActive (true);
 
-		type = "Eukaryote";
+		type = "Bacteria";
 		baseHP = 100;
 		baseHunger = 100;
 		baseAttack = 50;
-		baseDefense = 50;
-		baseSpeed = 10;
-		baseRep = 10;
-		baseSize = 10;
+		baseDefense = 20;
+		baseSpeed = 20;
+		baseRep = 60;
+		baseSize = 1;
 
 		getBaseStats (count);
 
