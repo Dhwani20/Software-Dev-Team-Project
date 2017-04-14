@@ -17,7 +17,7 @@ public class statsMaster : MonoBehaviour {
     int def;                //Defense
     int spd;                //Speed
     int rep;                //Reproduction Rate
-    int size;               //Size
+    int lifespan;           //lifespan
     
     //Hidden Stats
 
@@ -44,7 +44,7 @@ public class statsMaster : MonoBehaviour {
         def = 1;                
         spd = 1;                
         rep = 2;                
-        size = 1;
+        lifespan = 1;
 
         cold = 50;
         heat = 50;
@@ -54,6 +54,14 @@ public class statsMaster : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (hp < hpMax) //regenerate population over time
+        {
+            hp += rep;
+            if (hp > hpMax)
+            {
+                hp = hpMax;
+            }
+        }
         if ((int)Random.Range(1, 200) <= mutationChance) { //chance to mutate is Mutation Chance / 200
             if (Random.Range(1, 100) < 50) //50-50 chance to be a negative mutation
             {
@@ -64,7 +72,7 @@ public class statsMaster : MonoBehaviour {
             Mutate(chance); //once mutation chance is determined, mutate.
         }
         weatherUpdate();
-		
+        calchp(); //Add a counter to control this.
 	}
 
     void Mutate(int isNegative) { //mutation
@@ -98,12 +106,12 @@ public class statsMaster : MonoBehaviour {
                 break;
             case 4: //size
                 if (isNegative == 1){
-                    size -= 1;
-                    if (size <= 0)
-                        size = 1;
+                    lifespan -= 1;
+                    if (lifespan <= 0)
+                        lifespan = 1;
                 }
                 else
-                    size += 1;
+                    lifespan += 1;
                 break;
 
         }
@@ -113,7 +121,8 @@ public class statsMaster : MonoBehaviour {
     void weatherUpdate() //climate based mutation
     {
         //Sunny and Cloudy have no effect until temperature is implemented
-        if (isRaining) {
+        if (isRaining)
+        {
             if ((int)Random.Range(1, 200) <= mutationChance)
             {
                 if (wet < 200)
@@ -127,7 +136,8 @@ public class statsMaster : MonoBehaviour {
                     hp++;
                 }
             }
-            else if ((2 * wet) < dry) { //susceptible to rain
+            else if ((2 * wet) < dry)
+            { //susceptible to rain
                 if (hp > 0) hp--;
             }
 
@@ -154,5 +164,32 @@ public class statsMaster : MonoBehaviour {
 
         }
 
+    }
+
+    void calchp() //calculate max population/regen.
+    {
+        int starve = 0;
+        int deathrate = 0;
+        int bonus = 0;
+
+        if (hunger > 80) //plentiful food
+        {
+            bonus = (def/2) * rep;
+        }
+
+        if (hunger <= 30)
+        { //starvation/food scarcity
+            if (hunger == 0)
+            {
+                starve = hpMax / 4;
+            }
+            else 
+                starve = 300 / hunger;
+        }
+
+        deathrate = starve + (100 / def) + (100 / rep); //Low durability + low birth rate = high death rate.
+
+        hpMax = 20 + bonus - deathrate; //final calculation
+        
     }
 }
