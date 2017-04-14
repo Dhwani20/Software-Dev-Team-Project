@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-/// <summary>
-/// THIS CODE IS CURRENTLY UNTESTED!
-/// 
-/// Jo, try to adapt this to the UI you're working on. Let me know if any problems or unexpected behavior arise.
-/// </summary>
 
 public class statsMaster : MonoBehaviour {
     int hpMax;              //Max Population (Health) this stat's value will ideally be determined based on a calculation involving the other stats + environmental factors. That aspect has not yet been implemented since this is mostly meant to test mutation behavior.
@@ -30,6 +25,8 @@ public class statsMaster : MonoBehaviour {
     int mutationChance = 1; //Mutation chance
     int chance;
 
+    int weatherbonus;
+
     //placeholder variables. Mario, please adapt these to the proper variables if you can.
     bool isRaining;
     bool isSnowing;
@@ -44,12 +41,13 @@ public class statsMaster : MonoBehaviour {
         def = 1;                
         spd = 1;                
         rep = 2;                
-        lifespan = 1;
+        lifespan = 50;
 
         cold = 50;
         heat = 50;
         wet = 50;
         dry = 50;
+        weatherbonus = 0;
     }
 	
 	// Update is called once per frame
@@ -132,13 +130,14 @@ public class statsMaster : MonoBehaviour {
             { //adapted so well to rain conditions that the species is thriving
                 if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
                 {
-                    hpMax++;
-                    hp++;
+                    weatherbonus++;
                 }
             }
             else if ((2 * wet) < dry)
             { //susceptible to rain
                 if (hp > 0) hp--;
+                if (weatherbonus > 0)
+                    weatherbonus--;
             }
 
         }
@@ -153,17 +152,21 @@ public class statsMaster : MonoBehaviour {
             { //adapted so well to snowy conditions that the species is thriving
                 if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
                 {
-                    hpMax++;
-                    hp++;
+                    weatherbonus++;
                 }
             }
             else if ((2 * cold) < heat)
             { //susceptible to cold
                 if (hp > 0) hp--;
+                if (weatherbonus > 0)
+                    weatherbonus--;
             }
 
         }
-
+        else {//default
+            if (weatherbonus > 0)
+            weatherbonus--;
+        }
     }
 
     void calchp() //calculate max population/regen.
@@ -187,9 +190,9 @@ public class statsMaster : MonoBehaviour {
                 starve = 300 / hunger;
         }
 
-        deathrate = starve + (100 / def) + (100 / rep); //Low durability + low birth rate = high death rate.
+        deathrate = starve + (100 / def) + (100 / rep); //Low durability + low birth rate = high death rate. High birth rate + low lifespan = low death rate
 
-        hpMax = 20 + bonus - deathrate; //final calculation
+        hpMax = 20 + bonus + weatherbonus - deathrate; //final calculation
         
     }
 }
