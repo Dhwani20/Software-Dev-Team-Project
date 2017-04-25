@@ -9,8 +9,9 @@ public class ManageChar : MonoBehaviour {
 	public GameObject[] playerSpriteArr3;
 	public Text text;
 	public int count;
+    public int hp;
 
-	private int countMax;
+    private int countMax;
 	public GameObject[] charTextArr;
 	private ShowPanels showPanels;
 
@@ -39,11 +40,27 @@ public class ManageChar : MonoBehaviour {
 	private int SPD;
 	private int REP;
 	private int SZ;
+    //Hidden Stats
 
-	private int chance;
+    //Resistances
+    int cold;
+    int heat; //unused until temperature is implemented
+    int wet;
+    int dry; //unused until temperature is implemented
+
+    int weatherbonus;
+    private int chance;
 	private int mutationChance = 10;
 
-	void Awake(){
+    //placeholder variables. Mario, please adapt these to the proper variables if you can.
+    bool isRaining;
+    bool isSnowing;
+    bool isSunny;
+    bool isCloudy;
+
+    int frameCount = 0;
+
+    void Awake(){
 		//Get a reference to ShowPanels attached to UI object
 		showPanels = GetComponent<ShowPanels> ();
 	}
@@ -75,12 +92,16 @@ public class ManageChar : MonoBehaviour {
 
 		countMax = playerSpriteArr.Length;
 		hpMax = 20;
-		hunger = 1;
+        hp = hpMax;
+		hunger = 100;
 		atk = 1;                
 		def = 1;                
 		spd = 1;                
 		rep = 2;                
 		size = 1;
+
+
+
 	}
 
 	// Update is called once per frame
@@ -90,8 +111,8 @@ public class ManageChar : MonoBehaviour {
 		playerSpriteArr2 [count].SetActive (true);
 		playerSpriteArr3 [count].SetActive (true);
 
-			HP = baseHP;
-			HUN = baseHunger + hunger;
+			HP = hpMax;
+			HUN =hunger;
 			ATK = baseAttack + atk;
 			DEF = baseDefense + def;
 			SPD = baseSpeed + spd;
@@ -100,13 +121,13 @@ public class ManageChar : MonoBehaviour {
 
 
 			text.text = "TYPE: " + type +
-				"\nHEALTH: " + HP +
+				"\nPOPULATION: " + HP +
 				"\nHUNGER: " + HUN +
 				"\nATTACK: " + ATK +
 				"\nDEFENSE: " + DEF +
 				"\nSPEED: " + SPD +
 				"\nREPRODUCTION: " + REP +
-				"\nSIZE: " + SZ;
+				"\nLIFESPAN: " + SZ;
 	}
 
 	// Update is called once per frame
@@ -119,6 +140,14 @@ public class ManageChar : MonoBehaviour {
 				chance = 0;
 			Mutate (chance); //once mutation chance is determined, mutate.
 		}
+
+        if (frameCount > 30)
+        { //Things to update every 30 frames
+            frameCount = 0;
+            weatherUpdate();
+            calchp();
+        }
+        else frameCount++;
 	}
 
 	public void increaseCount()
@@ -257,5 +286,90 @@ public class ManageChar : MonoBehaviour {
 		int counter = 5;
 		return counter;
 	}
+
+
+    void weatherUpdate() //climate based mutation
+    {
+        //Sunny and Cloudy have no effect until temperature is implemented
+        if (isRaining)
+        {
+            if ((int)Random.Range(1, 200) <= mutationChance)
+            {
+                if (wet < 200)
+                    wet++;
+            }
+            if (wet >= 75)
+            { //adapted so well to rain conditions that the species is thriving
+                if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
+                {
+                    weatherbonus++;
+                }
+            }
+            else if ((2 * wet) < dry)
+            { //susceptible to rain
+                if (hp > 0) hp--;
+                if (weatherbonus > 0)
+                    weatherbonus--;
+            }
+
+        }
+        else if (isSnowing)
+        {
+            if ((int)Random.Range(1, 200) <= mutationChance)
+            {
+                if (cold < 200)
+                    cold++;
+            }
+            if (cold >= 75)
+            { //adapted so well to snowy conditions that the species is thriving
+                if ((int)Random.Range(1, 1000) <= 2 && hp == hpMax && hunger > 80)
+                {
+                    weatherbonus++;
+                }
+            }
+            else if ((2 * cold) < heat)
+            { //susceptible to cold
+                if (hp > 0) hp--;
+                if (weatherbonus > 0)
+                    weatherbonus--;
+            }
+
+        }
+        else
+        {//default
+            if (weatherbonus > 0)
+                weatherbonus--;
+        }
+    }
+
+
+
+
+    void calchp() //calculate max population/regen.
+    {
+        int starve = 0;
+        int deathrate = 0;
+        int bonus = 0;
+
+        if (hunger > 80) //plentiful food
+        {
+            bonus = def * rep;
+        }
+
+        if (hunger <= 30)
+        { //starvation/food scarcity
+            if (hunger == 0)
+            {
+                starve = hpMax / 4;
+            }
+            else
+                starve = 300 / hunger;
+        }
+
+        deathrate = starve + (50 / (1 + def)) + (50 / (1 + rep)); //Low durability + low birth rate = high death rate. High birth rate + low lifespan = low death rate
+
+        hpMax = 20 + bonus + weatherbonus - deathrate; //final calculation
+
+    }
 
 }
