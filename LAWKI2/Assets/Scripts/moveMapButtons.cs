@@ -39,13 +39,13 @@ public class moveMapButtons : MonoBehaviour
 
 	public void Update()
 	{
-		if (/*(moveFwd && !moveBwd) || */Input.GetKey(KeyCode.UpArrow))
-		{
-			Debug.Log("up arrow key is held down");
-			MoveMeFwd ();
+		//if (/*(moveFwd && !moveBwd) || */Input.GetKey(KeyCode.UpArrow))
+		//{
+		//	Debug.Log("up arrow key is held down");
+		//	MoveMeFwd ();
 			//latitude = latitude + 1;
 			//StartCoroutine(_Update());
-		}
+		//}
 
 		if (/*(moveBwd && !moveFwd) || */Input.GetKey(KeyCode.DownArrow))
 		{
