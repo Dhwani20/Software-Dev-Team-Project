@@ -17,7 +17,7 @@ public class timer2 : MonoBehaviour {
 	public Text text;
 	public float longitude = -105.0f;
 	public float latitude = 40.0f;
-	private float diff = 1.0f;
+	private float diff = 0.01f;
 	public bool loadOnStart = true;
 	private string MapUrl;
 	private string qs;
@@ -103,6 +103,7 @@ public class timer2 : MonoBehaviour {
 			Debug.Log("Weather ERROR: " + www.error);
 		}
 		Debug.Log ("icon: " + weather);
+
 		sunnyPanel.SetActive (false);
 		cloudyPanel.SetActive (false);
 		rainyPanel.SetActive (false);
@@ -133,7 +134,7 @@ public class timer2 : MonoBehaviour {
 	{
 		Debug.Log("Entered IEnumerator");
 		MapUrl = "http://maps.googleapis.com/maps/api/staticmap";
-		qs = "center=" + WWW.UnEscapeURL(string.Format("{0},{1}", latitude, longitude)) + "&zoom=15&size=512x512&scale=2&maptype=terrain&sensor=false";
+		qs = "center=" + WWW.UnEscapeURL(string.Format("{0},{1}", latitude, longitude)) + "&zoom=15&size=512x512&scale=2&maptype=satellite&sensor=false";
 		Debug.Log("qs: " + qs);
 		req = new WWW (MapUrl + "?" + qs);
 		while (!req.isDone)
