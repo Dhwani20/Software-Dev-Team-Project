@@ -387,7 +387,8 @@ public class ManageChar : MonoBehaviour
 			}
 			else if ((2 * wet) < dry)
 			{ //susceptible to rain
-				if (hp > 0) hp--;
+				//if (hp > 0) hp--;
+				if (hp > 1) hp--; // Prevent hp <1
 				if (weatherbonus > 0)
 					weatherbonus--;
 			}
@@ -409,7 +410,8 @@ public class ManageChar : MonoBehaviour
 			}
 			else if ((2 * cold) < heat)
 			{ //susceptible to cold
-				if (hp > 0) hp--;
+				//if (hp > 0) hp--;
+				if (hp > 1) hp--; // Prevent hp <1
 				if (weatherbonus > 0)
 					weatherbonus--;
 			}
@@ -449,6 +451,12 @@ public class ManageChar : MonoBehaviour
 		deathrate = starve + (50 / (1 + def)) + (50 / (1 + rep)); //Low durability + low birth rate = high death rate. High birth rate + low lifespan = low death rate
 
 		hpMax = 20 + bonus + weatherbonus - deathrate; //final calculation
+
+		// Prevent hp<1
+		if (hpMax < 1) 
+		{
+			hpMax = 1;
+		}
 
 	}
 
