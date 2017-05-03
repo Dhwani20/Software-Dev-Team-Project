@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class moveMapButtons : MonoBehaviour
 {
-	private float latitude = 105;
-	private float longitude = 40;
-	private float diff = 0.001f;
+	public Text text;
+	private float latitude = 105.0f;
+	private float longitude = 40.0f;
+	private float diff = 1.0f;
 	public bool loadOnStart = true;
 	private string url;
 	private string qs;
@@ -30,37 +32,45 @@ public class moveMapButtons : MonoBehaviour
 		moveFwd = false;
 		moveBwd = false;
 
+		text.text = "Lat: " + latitude +
+			"\nLong: " + longitude;
+
 	}
 
 	public void Update()
 	{
-		/*if ((moveFwd && !moveBwd) || Input.GetKey(KeyCode.UpArrow))
-		{
-			Debug.Log("up arrow key is held down");
-			latitude = latitude + 1;
-			StartCoroutine(_Update());
-		}
+		//if (/*(moveFwd && !moveBwd) || */Input.GetKey(KeyCode.UpArrow))
+		//{
+		//	Debug.Log("up arrow key is held down");
+		//	MoveMeFwd ();
+			//latitude = latitude + 1;
+			//StartCoroutine(_Update());
+		//}
 
-		if ((moveBwd && !moveFwd) || Input.GetKey(KeyCode.DownArrow))
+		if (/*(moveBwd && !moveFwd) || */Input.GetKey(KeyCode.DownArrow))
 		{
 			Debug.Log("down arrow key is held down");
-			latitude = latitude - 1;
-			StartCoroutine(_Update());
+			MoveMeBwd ();
+			//latitude = latitude - 1;
+			//StartCoroutine(_Update());
 		}
 
-		if ((moveRight && !moveLeft) || Input.GetKey(KeyCode.RightArrow))
+		if (/*(moveRight && !moveLeft) || */Input.GetKey(KeyCode.RightArrow))
 		{
 			Debug.Log("right arrow key is held down");
-			longitude = longitude + 1;
-			StartCoroutine(_Update());
+			MoveMeRight ();
+			//longitude = longitude + 1;
+			//StartCoroutine(_Update());
 		}
 
-		if ((moveLeft && !moveRight) || Input.GetKey(KeyCode.LeftArrow))
+		if (/*(moveLeft && !moveRight) || */Input.GetKey(KeyCode.LeftArrow))
 		{
 			Debug.Log("left arrow key is held down");
-			longitude = longitude - 1;
-			StartCoroutine(_Update());
-		}*/
+			MoveMeLeft ();
+			//longitude = longitude - 1;
+			//StartCoroutine(_Update());
+		}
+
 	}
 
 	IEnumerator _Update()
@@ -77,6 +87,8 @@ public class moveMapButtons : MonoBehaviour
 			GetComponent<Renderer>().material.mainTexture = req.texture;
 			Update();
 		}
+		text.text = "Lat: " + latitude +
+			"\nLong: " + longitude;
 	}
 
 	public void MoveMeLeft()
@@ -87,21 +99,12 @@ public class moveMapButtons : MonoBehaviour
 		StartCoroutine(_Update());
 	}
 
-	public void StopMeLeft()
-	{
-		//moveLeft = false;
-	}
 	public void MoveMeRight()
 	{
 		//moveRight = true;
 		Debug.Log("right arrow key is held down");
 		longitude = longitude + diff;
 		StartCoroutine(_Update());
-	}
-
-	public void StopMeRight()
-	{
-		//moveRight = false;
 	}
 
 	public void MoveMeFwd()
@@ -112,21 +115,11 @@ public class moveMapButtons : MonoBehaviour
 		StartCoroutine(_Update());
 	}
 
-	public void StopMeFwd()
-	{
-		//moveFwd = false;
-	}
-
 	public void MoveMeBwd()
 	{
 		//moveBwd = true;
 		Debug.Log("down arrow key is held down");
 		latitude = latitude - diff;
 		StartCoroutine(_Update());
-	}
-
-	public void StopMeBwd()
-	{
-		//moveBwd = false;
 	}
 }
