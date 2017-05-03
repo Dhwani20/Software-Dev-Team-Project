@@ -10,6 +10,13 @@ To make learning about the natural sciences more effective and fun.
 ### Motivation: 
 This app would be useful to educate students about the natural sciences and bring more students into STEM based studies.
 
+### Usage Instructions
+Option 1: After cloning this repository, load LAWKI2 project into Unity.
+Option 2: Pull compilation files and run on appropriate system. Use LAWKI_Mac.app for Mac, LAWKI_PC for PC, and LAWKI.apk for Android.
+
+### Testing:
+See TESTING.md for instructions on how to enable automated testing of system.
+
 ### Risks:
 * It would take a lot of time to make and we potentially might not finish.
 * Using new programming languages.
