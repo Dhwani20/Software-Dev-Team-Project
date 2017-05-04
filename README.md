@@ -6,7 +6,7 @@ LAWKI is a computer game meant to teach users about the natural sciences and enc
 The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
 
 ### Organization of repo:
-The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI. This folder also contains compiled versions of the game for Mac and Windows as LAWKI_Mac and Windows_LAWKI, respectively, located in folders LAWKI_Mac.app and LAWKI_PC.app, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
+The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI. This folder also contains compiled versions of the game for Mac and Windows as LAWKI_Mac.exe and Windows_LAWKI.exe, respectively, located in folders LAWKI_Mac.app and LAWKI_PC.app, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
 
 ### Build, Run, and Test code:
 Building: Clone this repo and import LAWKI into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
@@ -15,7 +15,15 @@ Running: After cloning this repo with the desired compiled file or building a fi
 
 Testing: Refer to TESTING.md for instructions on how to test the LAWKI code in Unity.
 
-### CI System
+### Auto Documentation:
+1. Open the LAWKI folder in the repository in unity.
+2. Through unity open the three scripts ManageChar, ShowPanels, and timer2 in Visual Studios.
+2. Under the projects tab in visual studios ensure that in the build section the XML file documentation option is enabled.
+3. build the project now in Visual Studios.
+4. In the LAWKI folder go to the Temp/bin/Debug where you will find an XML file called Assembly-CSharp.
+5. Open that XML file with Visual Studios and print it to a pdf file.
+
+### CI System:
 We did not use a CI system.
  
 ### Vision statement: 
@@ -27,7 +35,7 @@ This app would be useful to educate students about the natural sciences and brin
 
 ### Usage Instructions
 Option 1: After cloning this repository, load LAWKI project into Unity.
-Option 2: Pull compilation files and run on appropriate system. Use LAWKI_Mac.app for Mac and LAWKI.apk for Android.
+Option 2: Pull compilation files and run on appropriate system. Use LAWKI_Mac.exe for Mac and Windows_LAWKI.exe for Windows.
 
 ### Testing:
 See TESTING.md for instructions on how to enable automated testing of system.
