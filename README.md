@@ -6,7 +6,7 @@ LAWKI is a computer game meant to teach users about the natural sciences and enc
 The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
 
 ### Organization of repo:
-The LAWKI game files are located in the LAWKI2 folder and can be imported into Unity. This directory contains all the code, assests, and dependencies needed to build and run the game through Unity. An alpha Android version of the game is listed inside LAWKI2/ as LAWKI.apk. After cloning this reop, LAWKI2/LAWKI_Mac contains a Mac compatible version of the game. Instructions on how to initiate automatic testing of LAWKI can be found on the top level in the file TESTING.md.
+The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI2. This folder also contains compiled versions of the game for Mac and Android as LAWKI_Mac and LAWKI.apk, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
 
 ### Build, Run, and Test code:
 Building: Clone this repo and import LAWKI2 into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
