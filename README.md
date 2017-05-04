@@ -16,6 +16,7 @@ Running: After cloning this repo with the desired compiled file or building a fi
 Testing: Refer to TESTING.md for instructions on how to test the LAWKI code in Unity.
 
 ### Auto Documentation:
+The Auto Documentation PDF can be found in the repository in the folder AutoDocumentation.
 1. Open the LAWKI folder in the repository in unity.
 2. Through unity open the three scripts ManageChar, ShowPanels, and timer2 in Visual Studios.
 2. Under the projects tab in visual studios ensure that in the build section the XML file documentation option is enabled.
