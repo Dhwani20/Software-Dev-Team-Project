@@ -13,7 +13,7 @@ Building: Clone this repo and import LAWKI into Unity. Click File --> Build Sett
 
 Running on Windows: After cloning this reqo, go to LAWKI/LAWKI_PC.app/ and run the Windows_LAWKI.exe application.
 
-Running on Mac: After cloning this repo, open LAWKI/ in Finder and run LAWKI_Mac.app. Alter the graphics settings in Menu Configuration, as needed, and click play.
+Running on Mac: After cloning this repo, open LAWKI/ in Finder and run the LAWKI_Mac.app application. Alter the graphics settings in Menu Configuration, as needed, and click play.
 
 Testing: Refer to TESTING.md for instructions on how to test the LAWKI code in Unity.
 
