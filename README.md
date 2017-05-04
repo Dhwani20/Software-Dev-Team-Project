@@ -55,4 +55,4 @@ Agile
 [Trello](https://trello.com/b/oPpdoATT/software-dev-team-project)
 
 ### Project plan:
-![project plan image](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/Project%20Plan.PNG)
+![project plan image](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/Graphics/Project%20Plan.PNG)
