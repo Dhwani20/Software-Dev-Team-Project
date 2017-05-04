@@ -15,12 +15,20 @@ public class timer : MonoBehaviour {
 
 	private SpriteRenderer playerSprite;
 
+	private ManageChar manageChar;
+	private int counter;
+
 	private float time;
 	private float val;
 	private int num;
 
 	private float nextActionTime = 0.0f;
 	private float period = 2.0f;
+
+	void Awake() {
+		//Get a reference to ShowPanels attached to UI object
+		manageChar = GetComponent<ManageChar> ();
+	}
 
 	void Start() {
 		sunnyPanel.SetActive (true);
@@ -38,6 +46,9 @@ public class timer : MonoBehaviour {
 		var minutes = time / 60; //Divide the guiTime by sixty to get the minutes.
 		var seconds = time % 60;//Use the euclidean division for the seconds.
 		var fraction = (time * 100) % 100;
+
+		manageChar = GetComponent<ManageChar> ();
+		counter = manageChar.getCount ();
 
 		//update the label value
 		timerLabel.text = string.Format ("{0:00} : {1:00} : {2:000}", minutes, seconds, fraction);

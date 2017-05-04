@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShowPanels : MonoBehaviour {
 
-    public bool Testing = false;
+	public bool Testing = false;
 	public GameObject optionsPanel;							//Store a reference to the Game Object OptionsPanel 
 	public GameObject optionsTint;							//Store a reference to the Game Object OptionsTint 
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
@@ -12,38 +12,84 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject playerTint;							//Store a reference to the Game Object PlayerTint
 	public GameObject joystickCanvas;
 	public GameObject joyStat;
+	public GameObject playCanvas;
+	public GameObject charPanel;
+	public GameObject buttonCanvas;
 
-    void Start()
-    {
-        if(Testing)
-        {
-            StartCoroutine(TestPanels());
-        }
-        
-    }
 
-    IEnumerator TestPanels()
-    {
-        yield return new WaitForSeconds(15);
-        ShowOptionsPanel();
-        if (optionsPanel.activeSelf) Debug.Log("options menu open successful");
-        else Debug.Log("options menu open fail");
-        yield return new WaitForSeconds(2);
-        HideOptionsPanel();
-        if (!optionsPanel.activeSelf) Debug.Log("options menu close successful");
-        else Debug.Log("options menu close fail");
-        yield return new WaitForSeconds(2);
-        ShowPlayerPanel();
-        if (playerPanel.activeSelf) Debug.Log("player menu open successful");
-        else Debug.Log("player menu open fail");
-        yield return new WaitForSeconds(12);
-        HidePlayerPanel();
-        if (!playerPanel.activeSelf) Debug.Log("player menu open successful");
-        else Debug.Log("player menu open fail");
-    }
 
-    //Call this function to activate and display the Options panel during the main menu
-    public void ShowOptionsPanel()
+	void Start()
+	{
+		if(Testing)
+		{
+			StartCoroutine(TestPanels());
+		}
+
+	}
+
+	public void Quit()
+	{
+		#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+		#else
+			Application.Quit();
+		#endif
+	}
+
+	IEnumerator TestPanels()
+	{
+		yield return new WaitForSeconds (3);
+		charPanel.SetActive (false);
+		buttonCanvas.SetActive (true);
+		yield return new WaitForSeconds(38);
+		ShowOptionsPanel();
+		if (optionsPanel.activeSelf) Debug.Log("options menu open successful");
+		else Debug.Log("options menu open fail");
+		yield return new WaitForSeconds(2);
+		HideOptionsPanel();
+		if (!optionsPanel.activeSelf) Debug.Log("options menu close successful");
+		else Debug.Log("options menu close fail");
+
+		yield return new WaitForSeconds(3);
+		ShowPlayerPanel();
+		if (playerPanel.activeSelf) Debug.Log("player menu open successful");
+		else Debug.Log("player menu open fail");
+		yield return new WaitForSeconds(3);
+		HidePlayerPanel();
+		if (!playerPanel.activeSelf) Debug.Log("player menu close successful");
+		else Debug.Log("player menu close fail");
+
+		yield return new WaitForSeconds(3);
+		ShowPlayerPanel();
+		if (playerPanel.activeSelf) Debug.Log("player menu open successful");
+		else Debug.Log("player menu open fail");
+		yield return new WaitForSeconds(3);
+		HidePlayerPanel();
+		if (!playerPanel.activeSelf) Debug.Log("player menu close successful");
+		else Debug.Log("player menu close fail");
+
+		yield return new WaitForSeconds(3);
+		ShowPlayerPanel();
+		if (playerPanel.activeSelf) Debug.Log("player menu open successful");
+		else Debug.Log("player menu open fail");
+		yield return new WaitForSeconds(3);
+		HidePlayerPanel();
+		if (!playerPanel.activeSelf) Debug.Log("player menu close successful");
+		else Debug.Log("player menu close fail");
+
+		yield return new WaitForSeconds(3);
+		ShowPlayerPanel();
+		if (playerPanel.activeSelf) Debug.Log("player menu open successful");
+		else Debug.Log("player menu open fail");
+		yield return new WaitForSeconds(3);
+		HidePlayerPanel();
+		if (!playerPanel.activeSelf) Debug.Log("player menu close successful");
+		else Debug.Log("player menu close fail");
+		Quit ();
+	}
+
+	//Call this function to activate and display the Options panel during the main menu
+	public void ShowOptionsPanel()
 	{
 		optionsPanel.SetActive(true);
 		optionsTint.SetActive(true);
@@ -71,6 +117,13 @@ public class ShowPanels : MonoBehaviour {
 	public void HideMenu()
 	{
 		menuPanel.SetActive (false);
+
+		/*
+		optionsPanel.SetActive(false);
+		optionsTint.SetActive(false);
+		playerPanel.SetActive(true);
+		playerTint.SetActive(true);
+		*/
 	}
 	
 	//Call this function to activate and display the Pause panel during game play
@@ -105,6 +158,31 @@ public class ShowPanels : MonoBehaviour {
 			//joystickCanvas.SetActive (false);
 		//else if(joyStat.activeInHierarchy == true)
 			//joystickCanvas.SetActive (true);
+	}
+
+	public void HidePlayCanvas()
+	{
+		playCanvas.SetActive (false);
+	}
+
+	public void ShowPlayCanvas()
+	{
+		playCanvas.SetActive (true);
+	}
+
+	public void HideCharPanel()
+	{
+		charPanel.SetActive (false);
+	}
+
+	public void ShowButtonCanvas()
+	{
+		buttonCanvas.SetActive (true);
+	}
+
+	public void HideButtonCanvas()
+	{
+		buttonCanvas.SetActive (false);
 	}
 
 }

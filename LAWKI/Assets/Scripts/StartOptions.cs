@@ -13,7 +13,7 @@ public class StartOptions : MonoBehaviour {
 	public bool changeMusicOnStart;										//Choose whether to continue playing menu music or start a new music clip
 
 
-	[HideInInspector] public bool inMainMenu = true;					//If true, pause button disabled in main menu (Cancel in input manager, default escape key)
+	public bool inMainMenu = true;					//If true, pause button disabled in main menu (Cancel in input manager, default escape key)
 	[HideInInspector] public Animator animColorFade; 					//Reference to animator which will fade to and from black when starting game.
 	[HideInInspector] public Animator animMenuAlpha;					//Reference to animator that will fade out alpha of MenuPanel canvas group
 	 public AnimationClip fadeColorAnimationClip;		//Animation clip fading to color (black default) when changing scenes
@@ -63,6 +63,53 @@ public class StartOptions : MonoBehaviour {
 
 	}
 
+	public void MainButtonClicked()
+	{
+		if (changeMusicOnStart) 
+		{
+			playMusic.FadeDown(fadeColorAnimationClip.length);
+		}
+
+		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
+		if (changeScenes) 
+		{
+			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
+			Invoke ("MenuLoadDelayed", fadeColorAnimationClip.length * .5f);
+
+			//Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
+			animColorFade.SetTrigger ("fade");
+		} 
+		/*
+		else 
+		{
+			StartGameInScene();
+		}*/
+	}
+
+	public void LoadButtonClicked()
+	{
+		if (changeMusicOnStart) 
+		{
+			playMusic.FadeDown(fadeColorAnimationClip.length);
+		}
+
+		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
+		if (changeScenes) 
+		{
+			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
+			Invoke ("SceneLoadDelayed", fadeColorAnimationClip.length * .5f);
+
+			//Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
+			animColorFade.SetTrigger ("fade");
+		} 
+		/*
+		else 
+		{
+			StartGameInScene();
+		}*/
+	}
+
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += SceneWasLoaded;
@@ -91,15 +138,43 @@ public class StartOptions : MonoBehaviour {
 
 		//Hide the main menu UI element
 		showPanels.HideMenu ();
+		//showPanels.ShowPlayCanvas ();
 
 		//Load the selected scene, by scene index number in build settings
 		SceneManager.LoadScene (sceneToStart);
+	}
+
+	public void MenuLoadDelayed()
+	{
+		//Pause button now works if escape is pressed since we are no longer in Main menu.
+		inMainMenu = false;
+
+		//Hide the main menu UI element
+		//showPanels.HidePlayCanvas ();
+
+		//Load the selected scene, by scene index number in build settings
+		SceneManager.LoadScene (0);
+	}
+
+	public void SceneLoadDelayed()
+	{
+		//Pause button now works if escape is pressed since we are no longer in Main menu.
+		inMainMenu = false;
+
+		//Hide the main menu UI element
+		//showPanels.HidePlayCanvas ();
+
+		//Load the selected scene, by scene index number in build settings
+		SceneManager.LoadScene (sceneToStart);
+
 	}
 
 	public void HideDelayed()
 	{
 		//Hide the main menu UI element after fading out menu for start game in scene
 		showPanels.HideMenu();
+		//showPanels.ShowPlayCanvas ();
+
 	}
 
 	public void StartGameInScene()

@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TestingSprites : MonoBehaviour {
-    public bool Testing = false;
-    public GameObject[] playerSpriteArr;
+	public GameObject[] playerSpriteArr;
+	public GameObject[] selectCharArr;
 	public Text text;
 
 	private string type;
@@ -37,8 +37,19 @@ public class TestingSprites : MonoBehaviour {
 	private int chance;
 	private int mutationChance = 10;
 
+	private SelectChar selectChar;										//Reference to ShowPanels script on UI GameObject, to show and hide panels
+	private int myCount;
+
+	void Awake () {
+		//Get a reference to ShowPanels attached to UI object
+		selectChar = GetComponent<SelectChar> ();
+	}
+
 	// Use this for initialization
 	void Start () {
+		myCount = selectChar.getCount ();
+		playerSpriteArr [myCount].SetActive (true);
+
 		hpMax = 20;
 		hunger = 1;
 		atk = 1;                
@@ -47,8 +58,7 @@ public class TestingSprites : MonoBehaviour {
 		rep = 2;                
 		size = 1;
 
-        ClearSprite();
-        playerSpriteArr [1].SetActive (true);
+		//playerSpriteArr [2].SetActive (true);
 
 		type = "Eukaryote";
 		baseHP = 100;
@@ -58,86 +68,7 @@ public class TestingSprites : MonoBehaviour {
 		baseSpeed = 10;
 		baseRep = 10;
 		baseSize = 10;
-
-        if (Testing)
-        {
-            StartCoroutine(Test());
-        }
 	}
-
-    IEnumerator Test()
-    {
-        yield return new WaitForSeconds(21);
-        ClearSprite();
-        playerSpriteArr[2].SetActive(true);
-
-        type = "Eukaryote";
-        baseHP = 100;
-        baseHunger = 100;
-        baseAttack = 50;
-        baseDefense = 50;
-        baseSpeed = 10;
-        baseRep = 10;
-        baseSize = 10;
-        if (playerSpriteArr[2].activeSelf) Debug.Log("character sprite set successful");
-        else Debug.Log("character sprite set fail");
-        yield return new WaitForSeconds(2);
-        ClearSprite();
-        playerSpriteArr[3].SetActive(true);
-
-        type = "Alge";
-        baseHP = 100;
-        baseHunger = 100;
-        baseAttack = 50;
-        baseDefense = 30;
-        baseSpeed = 20;
-        baseRep = 20;
-        baseSize = 6;
-        if (playerSpriteArr[3].activeSelf) Debug.Log("character sprite set successful");
-        else Debug.Log("character sprite set fail");
-        yield return new WaitForSeconds(2);
-        ClearSprite();
-        playerSpriteArr[4].SetActive(true);
-
-        type = "Protozoa";
-        baseHP = 100;
-        baseHunger = 100;
-        baseAttack = 50;
-        baseDefense = 40;
-        baseSpeed = 20;
-        baseRep = 30;
-        baseSize = 6;
-        if (playerSpriteArr[4].activeSelf) Debug.Log("character sprite set successful");
-        else Debug.Log("character sprite set fail");
-        yield return new WaitForSeconds(2);
-        ClearSprite();
-        playerSpriteArr[5].SetActive(true);
-
-        type = "Protozoa";
-        baseHP = 100;
-        baseHunger = 100;
-        baseAttack = 50;
-        baseDefense = 30;
-        baseSpeed = 30;
-        baseRep = 30;
-        baseSize = 6;
-        if (playerSpriteArr[5].activeSelf) Debug.Log("character sprite set successful");
-        else Debug.Log("character sprite set fail");
-        yield return new WaitForSeconds(2);
-        ClearSprite();
-        playerSpriteArr[6].SetActive(true);
-
-        type = "Bacteria";
-        baseHP = 100;
-        baseHunger = 100;
-        baseAttack = 50;
-        baseDefense = 20;
-        baseSpeed = 50;
-        baseRep = 60;
-        baseSize = 1;
-        if (playerSpriteArr[6].activeSelf) Debug.Log("character sprite set successful");
-        else Debug.Log("character sprite set fail");
-    }
 
 	// Update is called once per frame
 	void FixedUpdate () {
