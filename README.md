@@ -2,9 +2,17 @@
 ## by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli, Josephina Hendrix - jrhendrix, Zachary Haney - zaha0077
 
 ### Description: 
-In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences. 
+LAWKI is a computer game meant to teach users about the natural sciences and encourage outdoor exploration. The game currently offers 5 characters to select from with information on biological organisms. Inside play mode, the user can move through the environment while their character's statistics change over time, distance, and based on the weather.
+The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
+
+### Organization of repo:
+The LAWKI game files are located in the LAWKI2 folder and can be imported into Unity. An alpha Android version of the game is listed inside LAWKI2/ as LAWKI.apk. After cloning this reop, LAWKI2/LAWKI_Mac contains a Mac compatible version of the game. Instructions on how to initiate automatic testing of LAWKI can be found on the top level in the file TESTING.md.
+
+
+ 
 
 ### Vision statement: 
+In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences.
 To make learning about the natural sciences more effective and fun.
 
 ### Motivation: 
