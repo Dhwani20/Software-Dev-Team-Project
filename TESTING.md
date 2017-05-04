@@ -18,7 +18,7 @@ How To Replicate Testing:
 8. As the game plays it you will see different features occur in the "Game" window and success/fail messages appear in the Console.
 9. When the test are completed the game with exit and the console will still have the success/fail messages.
 
-![Testing Outcome](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/team%20project%20pics/testingOutput.PNG)
+![Testing Outcome](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/Graphics/testingOutput.PNG)
 
 **User Acceptance Tests**:
 
