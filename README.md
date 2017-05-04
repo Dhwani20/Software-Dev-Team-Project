@@ -6,7 +6,7 @@ LAWKI is a computer game meant to teach users about the natural sciences and enc
 The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
 
 ### Organization of repo:
-The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI. This folder also contains compiled versions of the game for Mac and Windows as LAWKI_Mac and Windows_LAWKI, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
+The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI. This folder also contains compiled versions of the game for Mac and Windows as LAWKI_Mac and Windows_LAWKI, respectively, located in folders LAWKI_Mac.app and LAWKI_PC.app, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
 
 ### Build, Run, and Test code:
 Building: Clone this repo and import LAWKI into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
@@ -55,4 +55,4 @@ Agile
 [Trello](https://trello.com/b/oPpdoATT/software-dev-team-project)
 
 ### Project plan:
-![project plan image](https://github.com/MiRamirezJr/Software-Dev-team-project/blob/master/Graphics/Project%20Plan.PNG)
+![project plan image](https://github.com/MiRamirezJr/Software-Dev-Team-Project/blob/master/Graphics/team%20project%20pictures/Project%20Plan.PNG)
