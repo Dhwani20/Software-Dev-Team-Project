@@ -1,4 +1,4 @@
-# "Life as We Know It"
+# LAWKI: "Life as We Know It"
 ## by Dhwani Khatter - Dhwani20, Mario Ramirez - MiRamirezJr, Richard Li - rich4rdli, Josephina Hendrix - jrhendrix, Zachary Haney - zaha0077
 
 ### Description: 
