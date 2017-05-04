@@ -6,11 +6,16 @@ LAWKI is a computer game meant to teach users about the natural sciences and enc
 The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
 
 ### Organization of repo:
-The LAWKI game files are located in the LAWKI2 folder and can be imported into Unity. An alpha Android version of the game is listed inside LAWKI2/ as LAWKI.apk. After cloning this reop, LAWKI2/LAWKI_Mac contains a Mac compatible version of the game. Instructions on how to initiate automatic testing of LAWKI can be found on the top level in the file TESTING.md.
+The LAWKI game files are located in the LAWKI2 folder and can be imported into Unity. This directory contains all the code, assests, and dependencies needed to build and run the game through Unity. An alpha Android version of the game is listed inside LAWKI2/ as LAWKI.apk. After cloning this reop, LAWKI2/LAWKI_Mac contains a Mac compatible version of the game. Instructions on how to initiate automatic testing of LAWKI can be found on the top level in the file TESTING.md.
 
+### Build, Run, and Test code:
+Building: Clone this repo and import LAWKI2 into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
+Running: After cloning this repo with the desired compiled file or building a file using the building instructions, select the run file that is compatible with the available platform and play.
+Testing: Refer to TESTING.md for instructions on how to test the LAWKI code in Unity.
 
+### CI System
+We did not use a CI system.
  
-
 ### Vision statement: 
 In this project, we will be making an app that allows users to connect with not only other users, but also engage students to go outside and interact with their surroundings, as well as have fun while learning about the natural sciences.
 To make learning about the natural sciences more effective and fun.
