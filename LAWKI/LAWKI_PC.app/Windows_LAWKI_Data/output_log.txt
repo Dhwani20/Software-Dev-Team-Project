@@ -1,0 +1,98 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2029 MB
+    Driver:   22.19.157.3
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.055 seconds
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\miram\Dropbox\Current Semester Stuff\Software Development Methods and Tools\team.project\LAWKI\LAWKI_PC.app\Windows_LAWKI_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 3840x1206 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.591803 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1a7a4 -> priority: 1 
+The referenced script on this Behaviour (Game Object 'Wall_1') is missing!
+ 
+(Filename:  Line: 1754)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.140680 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1204.
+Total: 0.937079 ms (FindLiveObjects: 0.068023 ms CreateObjectMapping: 0.025508 ms MarkObjects: 0.818331 ms  DeleteObjects: 0.024629 ms)
+
+You are trying to load data from a www stream which had the following error when downloading.
+403 Forbidden
+ 
+(Filename:  Line: 789)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ShowPanels.HidePausePanel () [0x00000] in <filename unknown>:0 
+  at Pause.UnPause () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ShowPanels.HidePausePanel () [0x00000] in <filename unknown>:0 
+  at Pause.UnPause () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
