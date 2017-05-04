@@ -8,11 +8,12 @@
 
 How To Replicate Testing:
 1. Open unity and open project "LAWKI" (\Software-Dev-team-project\LAWKI).
-2. Click on playerCanvas in the Hierarchy tab.
-3. In the Inspector tab look for the "Show Panels", "Testing Sprites", and "Testing Timer" Scripts and make sure the Testing button in checked.
-4. Click on Plane in the Hierarchy tab.
-5. In the INspector tab look for the "Move Map" Script and make sure the Testing button in checked.
-6. Open the "Console" window by going to Window>Console, this is where the success or fail messages will be displayed.
+2. In the Project window open the Assets/Scences folder and double click on the Level 1 scene.
+2. Click on World in the Hierarchy tab.
+3. In the Inspector tab look for the "Timer2" Script and make sure the Testing button in checked.
+4. Click on PlayCanvas in the Hierarchy tab.
+5. In the Inspector tab look for the "Show Panels" and "Manage Char" Scripts and make sure the Testing button in checked.
+6. Open the Console window by going to Window>Console, this is where the success or fail messages will be displayed.
 7. Clear the Console and press the play button in Unity.
 8. As the game plays it you will see different features occur in the "Game" window and success/fail messages appear in the Console.
 9. When the test are completed the game with exit and the console will still have the success/fail messages.
