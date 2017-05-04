@@ -10,7 +10,9 @@ The LAWKI game files are located in the LAWKI2 folder and can be imported into U
 
 ### Build, Run, and Test code:
 Building: Clone this repo and import LAWKI2 into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
+
 Running: After cloning this repo with the desired compiled file or building a file using the building instructions, select the run file that is compatible with the available platform and play.
+
 Testing: Refer to TESTING.md for instructions on how to test the LAWKI code in Unity.
 
 ### CI System
