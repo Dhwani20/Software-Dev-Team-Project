@@ -6,10 +6,10 @@ LAWKI is a computer game meant to teach users about the natural sciences and enc
 The game was created in Unity and is currently compatible with Mac. Later versions will be compatible with PC and Android.
 
 ### Organization of repo:
-The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI2. This folder also contains compiled versions of the game for Mac and Android as LAWKI_Mac and LAWKI.apk, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
+The project source code, assests, dependencies, and test cases are located on our GitHub page under LAWKI. This folder also contains compiled versions of the game for Mac and Android as LAWKI_Mac and LAWKI.apk, respectively. Documentation on how to initiation automaticing testing of LAWKI is located in the TESTING.md file. 
 
 ### Build, Run, and Test code:
-Building: Clone this repo and import LAWKI2 into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
+Building: Clone this repo and import LAWKI into Unity. Click File --> Build Setting. Select the intended platform and click Switch Platform if necessary. Then select Build. On the right hand side, specify the Target Platform. Select Build and Unity will compile a run file for the intended platform.
 
 Running: After cloning this repo with the desired compiled file or building a file using the building instructions, select the run file that is compatible with the available platform and play.
 
@@ -26,8 +26,8 @@ To make learning about the natural sciences more effective and fun.
 This app would be useful to educate students about the natural sciences and bring more students into STEM based studies.
 
 ### Usage Instructions
-Option 1: After cloning this repository, load LAWKI2 project into Unity.
-Option 2: Pull compilation files and run on appropriate system. Use LAWKI_Mac.app for Mac, LAWKI_PC for PC, and LAWKI.apk for Android.
+Option 1: After cloning this repository, load LAWKI project into Unity.
+Option 2: Pull compilation files and run on appropriate system. Use LAWKI_Mac.app for Mac and LAWKI.apk for Android.
 
 ### Testing:
 See TESTING.md for instructions on how to enable automated testing of system.
